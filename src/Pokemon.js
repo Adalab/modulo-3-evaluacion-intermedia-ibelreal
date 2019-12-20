@@ -16,8 +16,8 @@ class Pokemon extends React.Component {
                 </div>
                 <h3>{this.props.item.name}</h3>
                 <div>{this.props.item.types.map((item, index) => {
-                    key = { index }
-                    return <ul>
+                    return <ul key={index}>
+
                         <li>
 
                             {item}
