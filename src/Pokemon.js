@@ -1,25 +1,18 @@
 import React from 'react';
 
 class Pokemon extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
 
-        }
-    }
     render(props) {
-        console.log(...this.props.item.types);
+
         return (
-            <li>
-                <div>
+            <li className="card">
+                <div className="card__img">
                     <img alt="pokemon" src={this.props.item.photo} />
                 </div>
-                <h3>{this.props.item.name}</h3>
-                <div>{this.props.item.types.map((item, index) => {
+                <h3 className="card__title">{this.props.item.name}</h3>
+                <div >{this.props.item.types.map((item, index) => {
                     return <ul key={index}>
-
-                        <li>
-
+                        <li className="card__btn">
                             {item}
                         </li>
                     </ul>
